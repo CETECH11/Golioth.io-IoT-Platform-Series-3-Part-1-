@@ -1,77 +1,22 @@
 # Zephyr SDK
 
-The Zephyr Software Development Kit (SDK) includes the toolchains for all
-supported target architectures as well as the host tools, such as QEMU and
-OpenOCD, for testing and debugging the Zephyr RTOS.
+![alt text](https://hackster.imgix.net/uploads/attachments/1508796/_O8CTazCPOv.blob?auto=compress%2Cformat&w=900&h=675&fit=min)
 
-The toolchains for the following target architectures are supported:
+Golioth is an IoT platform that provides cloud services for embedded devices. Enabling everything that our devices need from the cloud, including device messaging, security, updates, analytics, and more. Golioth is a straightforward commercial IoT development platform built for scale. Speed up development and increase the chances that your pilots will be put into production with a full featured platform of firmware, services & cloud management.
+They chose the Zephyr Project™, as the basis of their first embedded offering. Zephyr is an open-source, safe, secure, and flexible RTOS under the Linux Foundation. We offer the Golioth SDK - built on top of the Zephyr SDK - which we can use to quickly bootstrap an IoT application.
 
-- ARC (32-bit and 64-bit; ARCv1, ARCv2, ARCv3)
-- ARM (32-bit and 64-bit; ARMv6, ARMv7, ARMv8; A/R/M Profiles)
-- MIPS (32-bit and 64-bit)
-- Nios II
-- RISC-V (32-bit and 64-bit; RV32I, RV32E, RV64I)
-- x86 (32-bit and 64-bit)
-- Xtensa (sample_controller, intel_apl_adsp, intel_s1000,
-  nxp_imx_adsp, nxp_imx8m_adsp, espressif_esp32, espressif_esp32s2)
+![alt text](https://hackster.imgix.net/uploads/attachments/1508788/1_KOiNAZZC4P.png?auto=compress%2Cformat&w=740&h=555&fit=max)
 
-The following host tools are available as part of the Zephyr SDK:
+When embedded developers are encouraged to use tools they’re familiar with, the resulting IoT devices are more robust, reliable, and reach production sooner. Golioth prioritizes compatibility with the most ubiquitous tools of today, tomorrow, and beyond.Golioth can be implemented at any point in the development cycle. Use it to get your first IoT device running smoothly, then scale seamlessly for larger deployments.
+Choice in:
 
-- BOSSA
-- OpenOCD
-- QEMU
-- Xilinx QEMU
+Hardware: 100+ compatible boards  and growing.
+Connectivity: Cellular, Wi-Fi, Ethernet & Thread
+Messaging protocol: CoAP   &   MQTT
+Embedded software: Zephyr® RTOS ,  FreeRTOS™
 
-## Releases
+![alt text](https://hackster.imgix.net/uploads/attachments/1541598/pcbway_Mif6fzknyv.JPG?auto=compress%2Cformat&w=740&h=555&fit=max)
 
-The Zephyr SDK bundle releases are available for the following host platforms:
+You must check out [PCBWAY](https://www.pcbway.com/) for ordering PCBs online for cheap!
 
-- Linux (AArch64, x86-64)
-- macOS (AArch64, x86-64)
-- Windows (x86-64)
-
-These binaries can be downloaded from here:
-
-https://github.com/zephyrproject-rtos/sdk-ng/releases
-
-## Build Process
-
-The Zephyr Project maintains the infrastructure necessary to build and test the
-Zephyr SDK, and it is highly recommended to utilise this infrastructure for
-generating the Zephyr SDK binaries.
-
-When you submit a pull request to the Zephyr SDK repository, CI will
-automatically build and test the Zephyr SDK with the changes in the pull
-request and upload the binaries to the pull request check run, which you can
-download for further local testing as necessary.
-
-Locally building the Zephyr SDK is currently not supported because setting up
-the environment to do so is highly complex and the resource requirements far
-exceed what is found on common developer machines.
-
-### Workflow to Test Patches with Zephyr SDK
-
-The following workflow can be used to test a patch for GCC, for example,
-building the SDK remotely:
-
-- Submit your **DRAFT** gcc PR to Zephyr's
-  [GCC fork](https://github.com/zephyrproject-rtos/gcc) (etc.)
-- Update `.gitmodules` in sdk-ng to point to the fork with your gcc commit(s)
-- Resync submodules (`git submodule sync --recursive && cd gcc && git pull`)
-- Checkout the gcc commit hash in sdk-ng's `gcc` submodule and commit the
-  `.gitmodule` changes (`git add .gitmodules gcc && git commit -s`)
-- Submit a **DRAFT** PR to sdk-ng with the submodule change(s)
-
-Zephyr's CI will then build a new toolchain, which will be available in the PR
-check step. Verify that the GCC fix behaves as expected with the generated SDK.
-
-## Release Process
-
-To create a new Zephyr SDK release:
-
-- Update the VERSION file with the new version (e.g. 0.11.0 or 0.11.0-beta1)
-- On https://github.com/zephyrproject-rtos/sdk-ng/releases, create a new tag
-  named with the version number prefixed with `v` (e.g. for the version 0.11.0,
-  the tag name should be `v0.11.0`) and add the release information.
-- Once the release is published, CI will build the Zephyr SDK bundles for all
-  supported host platforms and will upload the binaries to the release page.
+You get 10 good-quality PCBs manufactured and shipped to your doorstep for cheap. You will also get a discount on shipping on your first order. Upload your Gerber files onto PCBWAY to get them manufactured with good quality and quick turnaround time. [PCBWay](https://www.pcbway.com/) now could provide a complete product solution, from design to enclosure production. Check out their online Gerber viewer function. With reward points, you can get free stuff from their gift shop.
